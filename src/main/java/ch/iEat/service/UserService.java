@@ -18,8 +18,6 @@ import ch.iEat.entity.User;
 import ch.iEat.repository.DishRepository;
 import ch.iEat.repository.RoleRepository;
 import ch.iEat.repository.UserRepository;
-import ch.room4you.entity.Ad;
-import ch.room4you.entity.RoomMate;
 
 @Service
 @Transactional
@@ -84,11 +82,6 @@ public class UserService {
 		List<Dish> dishes = dishRepository.findByCook(user);
 		user.setDishes(dishes);
 		return user;
-	}
-	
-	@Transactional
-	public List<User> findCooksForDish(Dish dish){
-		return userRepository.findByDish(dish);		
 	}
 	
 }
