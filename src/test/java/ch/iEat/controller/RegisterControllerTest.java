@@ -51,12 +51,12 @@ public class RegisterControllerTest {
 
     }
     
-    @Test
-    public void testUserAvailable() throws Exception{  	    	
-    	 this.mockMvc.perform(get("/available"))
-         .andExpect(status().isOk());
-
-    }
+//    @Test
+//    public void testUserAvailable() throws Exception{
+//    	 this.mockMvc.perform(get("/available"))
+//         .andExpect(status().isOk());
+//
+//    }
     
     
 

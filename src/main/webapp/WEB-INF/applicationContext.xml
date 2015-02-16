@@ -34,13 +34,13 @@
 	</beans>
 
 <!-- 	localhost -->
-	<beans profile="prod">
-		<import resource="springData.xml"/>
-	</beans>
+	<!--<beans profile="prod">-->
+		<!--<import resource="springData.xml"/>-->
+	<!--</beans>-->
 	
 <!-- 	production -->
-<!-- 	<beans profile="prod"> -->
-<!-- 		<import resource="databaseForProduction.xml"/> -->
-<!-- 	</beans> -->
+ 	<beans profile="prod">
+ 		<import resource="databaseForProduction.xml"/>
+ 	</beans>
 
 </beans>

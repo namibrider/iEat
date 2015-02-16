@@ -77,46 +77,46 @@
 <!-- 						</div> -->
 <!-- 					</div> -->
 
-					<c:if test="${fn:length(selectedRoomMates) > 0}">					
-					<div class="form-group">
-						<label for="name" class="col-sm-2 control-label">Already selected cooks:</label>
-						<div class="col-sm-10">
-							<c:forEach items="${selectedRoomMates}" var="items">
-								<p>${items.user.name}
-									<a href="<spring:url value="/dish/deleteRoomMate/${ad.id}/${items.user.id}.html"/>"
-										class="btn btn-danger btn-xs" role="button">Delete</a>
-								</p>
-							</c:forEach>
-							
-						</div>
-					</div>
-					</c:if>
-					
-					<div class="form-group">
-						<label for="name" class="col-sm-2 control-label">Add room mates:</label>
-						<div class="col-sm-10">
-							<form:select multiple="" name="roomMates" id="roomMateSelection" class="form-control" path="roomMates">
-								<form:options items="${users}" var="users" itemValue="id"
-  									itemLabel="name"/>
-							</form:select>
-						</div>
-					</div>					
+					<%--<c:if test="${fn:length(selectedRoomMates) > 0}">--%>
+					<%--<div class="form-group">--%>
+						<%--<label for="name" class="col-sm-2 control-label">Already selected cooks:</label>--%>
+						<%--<div class="col-sm-10">--%>
+							<%--<c:forEach items="${selectedRoomMates}" var="items">--%>
+								<%--<p>${items.user.name}--%>
+									<%--<a href="<spring:url value="/dish/deleteRoomMate/${ad.id}/${items.user.id}.html"/>"--%>
+										<%--class="btn btn-danger btn-xs" role="button">Delete</a>--%>
+								<%--</p>--%>
+							<%--</c:forEach>--%>
 
-					
-					<c:if test="${fn:length(selectedRoomMates) > 0}">					
-					<div class="form-group">
-						<label for="name" class="col-sm-2 control-label">Already selected room mates:</label>
-						<div class="col-sm-10">
-							<c:forEach items="${selectedRoomMates}" var="items">
-								<p>${items.ingredients.name}
-									<a href="<spring:url value="/dish/deleteIngredients/${dish.id}/${items.dish.id}.html"/>"
-										class="btn btn-danger btn-xs" role="button">Delete</a>
-								</p>
-							</c:forEach>
-							
-						</div>
-					</div>
-					</c:if>
+						<%--</div>--%>
+					<%--</div>--%>
+					<%--</c:if>--%>
+
+					<%--<div class="form-group">--%>
+						<%--<label for="name" class="col-sm-2 control-label">Add room mates:</label>--%>
+						<%--<div class="col-sm-10">--%>
+							<%--<form:select multiple="" name="roomMates" id="roomMateSelection" class="form-control" path="roomMates">--%>
+								<%--<form:options items="${users}" var="users" itemValue="id"--%>
+  									<%--itemLabel="name"/>--%>
+							<%--</form:select>--%>
+						<%--</div>--%>
+					<%--</div>--%>
+
+
+					<%--<c:if test="${fn:length(selectedRoomMates) > 0}">--%>
+					<%--<div class="form-group">--%>
+						<%--<label for="name" class="col-sm-2 control-label">Already selected room mates:</label>--%>
+						<%--<div class="col-sm-10">--%>
+							<%--<c:forEach items="${selectedRoomMates}" var="items">--%>
+								<%--<p>${items.ingredients.name}--%>
+									<%--<a href="<spring:url value="/dish/deleteIngredients/${dish.id}/${items.dish.id}.html"/>"--%>
+										<%--class="btn btn-danger btn-xs" role="button">Delete</a>--%>
+								<%--</p>--%>
+							<%--</c:forEach>--%>
+
+						<%--</div>--%>
+					<%--</div>--%>
+					<%--</c:if>--%>
 					
 <!-- 					<div class="form-group"> -->
 <!-- 						<label for="name" class="col-sm-2 control-label">Add ingredients:</label> -->

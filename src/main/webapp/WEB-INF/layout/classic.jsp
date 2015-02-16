@@ -27,8 +27,11 @@
 	
 <link rel="stylesheet"
 	href="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.css">
-	
 
+<%--<link rel="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">--%>
+
+
+<%--<script scr="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>--%>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.js"></script>
 
