@@ -53,6 +53,13 @@
 <!--   </div>  -->
 <%-- </form:form> --%>
 
+<a href="<spring:url value="/random.html"/>"  class="btn btn-primary" role="button">
+    Get random dish
+</a>
+<a href="<spring:url value="/dishes.html"/>"  class="btn btn-primary" role="button">
+    Show all dishes
+</a>
+
 <hr>
 
  <div id="Layout" class="container">
@@ -108,3 +115,4 @@
 
 </div>
 </div>
+

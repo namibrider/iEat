@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import javax.transaction.Transactional;
 
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MultipartFile;
 
 import pojo.SearchDishesForm;
@@ -44,7 +46,7 @@ public class DishController {
 	
 	@Autowired
 	private ImageService imageService;
-	
+
 	
 	
 	/**
@@ -131,7 +133,7 @@ public class DishController {
 	
 	
 	/**
-	 * Removes the ad with the id={id} and redirects to account.html
+	 * Removes the dish with the id={id} and redirects to account.html
 	 * 
 	 * @param model
 	 * @param id
@@ -196,6 +198,41 @@ public class DishController {
 		return "dishes";
 	}
 
+    /**
+     * Maps the request url /ads{id} (with an ad id) to the page adDetail.jsp
+     * and provides the model "ad" with all fields of the ad
+     *
+     * @param model
+     * @return
+     */
+    @RequestMapping("/random")
+    @Transactional
+    public String getRandomDish(Model model, WebRequest request) {
+        List<Dish> dishes = dishService.findAll();
+        Dish randomDish = dishes.get(randInt(0, dishes.size()-1));
+        List<Dish> rdishes = new ArrayList<Dish>();
+        rdishes.add(randomDish);
+        request.removeAttribute("dishes", WebRequest.SCOPE_SESSION);
+        model.addAttribute("rdishes", dishService.findOne(randomDish.getId()));
+        model.addAttribute("dishes", rdishes);
+        System.out.println("RandomDish: "+ randomDish.getId() + randomDish.getDishName());
+        System.out.println("Find Dish: "+ dishService.findOne(randomDish.getId()).getDishName());
+        return "dishes";
+    }
+
+    public static int randInt(int min, int max) {
+
+        // NOTE: Usually this should be a field rather than a method
+        // variable so that it is not re-seeded every call.
+        Random rand = new Random();
+
+        // nextInt is normally exclusive of the top value,
+        // so add 1 to make it inclusive
+        int randomNum = rand.nextInt((max - min) + 1) + min;
+
+        return randomNum;
+    }
+
 	/**
 	 * Maps the request url /ads{id} (with an ad id) to the page adDetail.jsp
 	 * and provides the model "ad" with all fields of the ad
@@ -209,7 +246,7 @@ public class DishController {
 	public String detail(Model model, @PathVariable("id") int id, Principal principal) {
 		model.addAttribute("dish", dishService.findOne(id));
 
-		return "adDetail";
+		return "dishDetail";
 	}
 
 	

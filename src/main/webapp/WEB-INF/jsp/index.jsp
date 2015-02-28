@@ -12,30 +12,12 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="http://i.imgur.com/DHsDaCq.gif" alt="logo room4you">
+        <img src="http://i.imgur.com/6sCMy.jpg" alt="spaghetti"   style="width: 100%; height: 100%;">
     </div>
     <div class="item">
-      <img src="http://i.imgur.com/qlcAoMu.jpg" alt="Bern">
+      <img src="http://i.imgur.com/6sCMy.jpg" alt="spaghetti">
       <div class="carousel-caption">
-          <h3>Bern</h3>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://i.imgur.com/rdvIhvn.jpg" alt="Basel">
-      <div class="carousel-caption">
-          <h3>Basel</h3>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://i.imgur.com/H1ncZ0n.jpg" alt="Genf">
-      <div class="carousel-caption">
-          <h3>Genf</h3>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://i.imgur.com/8jeMbry.jpg" alt="Luzern">
-      <div class="carousel-caption">
-          <h3>Luzern</h3>
+          <h3>Yummi</h3>
       </div>
     </div>
   </div>
@@ -49,14 +31,12 @@
 
 <div class="jumbotron home-container">
 	<div class="left-area float-left">
-		<p>Welcome to Room4You, the new place to find the best room for you!</p>
-  		<p>You can freely browse available ads and look at their properties. To interact with the advertiser a free registration is necessary. However a room4you
- 		account is created in no time.</p>
+		<p>Welcome to iEat, the new place to find a suggestion for the next meal!</p>
 	</div>
   	<div class="right-area float-left">
-  		<a class="btn btn-primary btn-lg btn-home" href="ads.html" role="button">Browse ads</a>
+  		<a class="btn btn-primary btn-lg btn-home" href="dishes.html" role="button">Browse dishes</a>
   		<security:authorize access="isAuthenticated()">
-  			<a class="btn btn-primary btn-lg btn-home" href="<spring:url value="/placeNewAd.html"/>">Place new Ad</a>
+  			<a class="btn btn-primary btn-lg btn-home" href="<spring:url value="/placeNewDish.html"/>">Place new dish</a>
   		</security:authorize>
   		<security:authorize access="! isAuthenticated()">
   			<a class="btn btn-primary btn-lg btn-home" href="<spring:url value="/register.html" />">Register</a>

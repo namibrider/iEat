@@ -7,7 +7,7 @@
 
 
 <form:form method="post" modelAttribute="dish" cssClass="form-horizontal adForm" enctype="multipart/form-data">
-	<h4>Ad</h4>
+	<h4>Dish</h4>
 	<div id="editForm">
 			<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Dish Name:</label>
