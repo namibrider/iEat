@@ -1,1 +1,1 @@
-${PRE_JAVA}java ${JAVA_OPTS} -jar webapp-runner-7.0.40.0.jar --port ${PORT} ${WEBAPP_RUNNER_OPTS} iEat-0.0.1-SNAPSHOT.war
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* iEat
