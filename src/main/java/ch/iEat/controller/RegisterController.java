@@ -18,8 +18,7 @@ import ch.iEat.service.UserService;
 
 /**
  * Maps the request url /register
- * 
- * @param model
+ *
  * @return
  */
 @Controller
@@ -47,8 +46,7 @@ public class RegisterController {
 
 	/**
 	 * Maps the request url /register to the page users-register.jsp
-	 * 
-	 * @param model
+	 *
 	 * @return
 	 */
 	@RequestMapping
@@ -60,8 +58,7 @@ public class RegisterController {
 	 * Receives the data from user-register form and adds the data to the user
 	 * object and saves the user in the database. If successful, show success
 	 * notification on register page
-	 * 
-	 * @param model
+	 *
 	 * @return
 	 */
 	@RequestMapping(method = RequestMethod.POST)

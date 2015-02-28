@@ -8,8 +8,7 @@ public class LoginController {
 
 	/**
 	 * Maps the request url /login to the page login.jsp
-	 * 
-	 * @param model
+	 *
 	 * @return
 	 */
 	@RequestMapping("/login")

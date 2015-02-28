@@ -55,8 +55,7 @@ public class AdminController {
 
 	/**
 	 * Removes the user with id = {id} and redirects to users.html
-	 * 
-	 * @param model
+	 *
 	 * @return
 	 */
 	@RequestMapping("/remove/{id}")

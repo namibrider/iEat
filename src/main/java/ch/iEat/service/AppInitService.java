@@ -20,7 +20,6 @@ import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 import org.apache.commons.fileupload.disk.DiskFileItem;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -40,9 +39,7 @@ import ch.iEat.repository.UserRepository;
 @Transactional
 @Service
 public class AppInitService {
-	
-	  static Logger log = Logger.getLogger(
-              AppInitService.class.getName());
+
 	
 	//Set email-property
 	private final String EMAILACCOUNT = "ese2014team3@gmail.com";
@@ -64,7 +61,7 @@ public class AppInitService {
 		
 	@PostConstruct
 	public void init() throws ParseException, IOException {
-		log.info("Initializing application...");
+		System.out.println("Initializing application...");
 		initializeApplication();
 		initializeDB();	
 
@@ -77,7 +74,7 @@ public class AppInitService {
 		try {
 	 
 			output = new FileOutputStream("config.properties");
-			log.info("Writing Properties");
+            System.out.println("Writing Properties");
 	 
 			// set the properties value
 			prop.setProperty("emailAccount", EMAILACCOUNT);
@@ -137,7 +134,7 @@ public class AppInitService {
 		 dish1.setDishName("Spaghetti Pesto"+i);
 		 dish1.setDescription("Spaghetti kochen, Wasser abschütten und Barilla Pesto Sauce dazu geben");
 		 dishRepository.save(dish1);
-		 log.info("First dish created!");
+        System.out.println("First dish created!");
 		return dish1;
 	}
 	
@@ -155,7 +152,7 @@ public class AppInitService {
 		userAdmin.setRoles(roles);
 		userAdmin.setAboutMe("I am the admin of room4you and I am 12 years old");
 		userRepository.save(userAdmin);
-		log.info("Admin user created!");
+        System.out.println("Admin user created!");
 		return userAdmin;
 	}
 	
@@ -170,7 +167,7 @@ public class AppInitService {
 		user.setRoles(roles);
 		user.setAboutMe("My hobbies are reading and taking a walk at sunset");
 		userRepository.save(user);
-		log.info("user created!");
+        System.out.println("user created!");
 		return user;
 	}
 	
@@ -186,7 +183,7 @@ public class AppInitService {
 			user.setRoles(roles);
 			user.setAboutMe("My hobbies are reading and taking a walk at sunset");
 			userRepository.save(user);
-			log.info("user"+i +" created!");
+            System.out.println("user" + i + " created!");
 		}
 
 	}

@@ -11,7 +11,6 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
-import org.apache.log4j.Logger;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.method.P;
@@ -39,15 +38,11 @@ public class DishService {
 
 	@Autowired
 	private ImageRepository imageRepository;
-	
-	
-	  static Logger log = Logger.getLogger(
-              DishService.class.getName());
+
 
 	/**
 	 * Saves the ad in the database
-	 * 
-	 * @param ad
+	 *
 	 * @param name
 	 */
 	public void save(Dish dish, String name) {
@@ -103,7 +98,7 @@ public class DishService {
 				saveImages(dish, images);
 
 		} catch (IOException e) {
-			log.error("Could not load image", e);
+            System.out.println("Could not load image");
 			e.printStackTrace();
 		}
 
@@ -145,7 +140,7 @@ public class DishService {
 			}
 
 		} catch (IOException e) {
-			log.error("Could not save Image", e);
+			System.out.println("Could not save Image");
 			e.printStackTrace();
 		} 
 	}

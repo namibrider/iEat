@@ -9,7 +9,6 @@ import java.util.Random;
 
 import javax.transaction.Transactional;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -35,8 +34,6 @@ import ch.iEat.service.UserService;
 
 @Controller
 public class DishController {
-	
-	Logger  log = Logger.getLogger(DishController.class);
 
 	@Autowired
 	private DishService dishService;
@@ -134,8 +131,7 @@ public class DishController {
 	
 	/**
 	 * Removes the dish with the id={id} and redirects to account.html
-	 * 
-	 * @param model
+	 *
 	 * @param id
 	 * @return
 	 */

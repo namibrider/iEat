@@ -78,8 +78,7 @@ public class UserController {
 
 	/**
 	 * Removes the user with id = {id} and logs the user out
-	 * 
-	 * @param model
+	 *
 	 * @return
 	 */
 	@RequestMapping("/account/remove/{id}")
