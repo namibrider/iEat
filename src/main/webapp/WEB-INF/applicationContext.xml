@@ -34,9 +34,9 @@
 	</beans>
 
 <!-- 	localhost -->
-	<!--<beans profile="prod">-->
-		<!--<import resource="springData.xml"/>-->
-	<!--</beans>-->
+	<beans profile="dev">
+		<import resource="springData.xml"/>
+	</beans>
 	
 <!-- 	production -->
  	<beans profile="prod">
