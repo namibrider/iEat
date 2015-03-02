@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
 	<entity>
-		<entity-name>ch.iEat.entity.Dish</entity-name>
+		<entity-name>ch.iMampf.entity.Dish</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>226</entity-height>
 		<entity-X-Coordinate>155</entity-X-Coordinate>
@@ -11,7 +11,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>ch.iEat.entity.Image</entity-name>
+		<entity-name>ch.iMampf.entity.Image</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>166</entity-height>
 		<entity-X-Coordinate>451</entity-X-Coordinate>
@@ -22,7 +22,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>ch.iEat.entity.Ingredient</entity-name>
+		<entity-name>ch.iMampf.entity.Ingredient</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>186</entity-height>
 		<entity-X-Coordinate>332</entity-X-Coordinate>
@@ -33,7 +33,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>ch.iEat.entity.Role</entity-name>
+		<entity-name>ch.iMampf.entity.Role</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>146</entity-height>
 		<entity-X-Coordinate>75</entity-X-Coordinate>
@@ -44,7 +44,7 @@
 	</entity>
 
 	<entity>
-		<entity-name>ch.iEat.entity.User</entity-name>
+		<entity-name>ch.iMampf.entity.User</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>266</entity-height>
 		<entity-X-Coordinate>364</entity-X-Coordinate>

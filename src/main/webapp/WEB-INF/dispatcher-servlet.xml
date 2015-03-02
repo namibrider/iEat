@@ -10,7 +10,7 @@
 	<mvc:annotation-driven />
 	<mvc:resources mapping="/resources/**" location="/resources/"/>
 
-	<context:component-scan base-package="ch.iEat.controller" />
+	<context:component-scan base-package="ch.iMampf.controller" />
 
 	<bean id="tilesConfigurer"
 		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">

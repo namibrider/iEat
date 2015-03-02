@@ -26,7 +26,7 @@
             <label for="numberOfRooms" class="col-sm-4">Cook</label>
             <div class="col-sm-8">
                 <div class="input-group">
-                    <p>${dish.cook.name}</p>
+                    <p>${dish.user.name}</p>
                 </div>
             </div>
           </div>

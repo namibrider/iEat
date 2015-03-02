@@ -31,7 +31,7 @@
 
 <div class="jumbotron home-container">
 	<div class="left-area float-left">
-		<p>Welcome to iEat, the new place to find a suggestion for the next meal!</p>
+		<p>Welcome to iMampf, the new place to find a suggestion for the next meal!</p>
 	</div>
   	<div class="right-area float-left">
   		<a class="btn btn-primary btn-lg btn-home" href="dishes.html" role="button">Browse dishes</a>

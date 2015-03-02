@@ -26,10 +26,17 @@
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Cook:</label>
 						<div class="col-sm-10">
-							<form:input path="cook" class="form-control" />
-							<form:errors path="cook" />
+							<form:input path="user" class="form-control" />
+							<form:errors path="user" />
 						</div>
 					</div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Cook:</label>
+                        <div class="col-sm-10">
+                            <form:input path="cook" class="form-control" />
+                            <form:errors path="cook" />
+                        </div>
+                    </div>
 <!-- 					<div class="form-group"> -->
 <!-- 						<label for="name" class="col-sm-2 control-label">City:</label> -->
 <!-- 						<div class="col-sm-10"> -->

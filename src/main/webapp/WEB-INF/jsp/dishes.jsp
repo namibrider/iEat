@@ -6,52 +6,10 @@
 <script src="${pageContext.request.contextPath}/resources/js/dataTable.js"></script>
 <script src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+<script src="//cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js"></script>
+<link rel="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
+<link rel="//cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css">
 
-
-<%-- <form:form action="searchDishes.html" class="form-inline" role="form" method="post" > --%>
-<!--     <div class="form-group"> -->
-<!--     <label class="sr-only" for="searchTextZIP">ZIP</label> -->
-<!--     <input type="text" class="form-control" name="searchTextZip" id="searchTextZip" placeholder="ZIP"> -->
-<!--   </div>  -->
-<!--   <div class="form-group"> -->
-<!--     <label class="sr-only" for="searchTextCity">City</label> -->
-<!--     <input type="text" class="form-control" name="searchTextCity" id="searchTextCity" placeholder="City"> -->
-<!--   </div> -->
-<!--    <div class="checkbox"> -->
-<!--     <label> -->
-<!--       <input type="checkbox" name="searchSharedApartment" id="searchSharedApartment" checked> Shared apartments -->
-<!--     </label> -->
-<!--   </div>   -->
-<!--   <button  type="submit" class="btn btn-default">Search</button> -->
-<!--   <button id="toggleMoreSearchCriteriaBtn" type="button" class="btn btn-default">More criteria</button> -->
-<!--   <p> -->
-<!--   <div id="moreSearchCriteria" style="display:none"> -->
-<!--    <div class="form-group"> -->
-<!--     <label class="sr-only" for="searchTextMinPrice">Rent per month from</label> -->
-<!--     <input type="number" class="form-control" name="searchTextMinPrice" id="searchTextMinPrice" step="100" placeholder="Min. rent in CHF"> -->
-<!--   </div> -->
-<!--     <div class="form-group"> -->
-<!--     <label class="sr-only" for="searchTextMaxPrice">Rent per month to</label> -->
-<!--     <input type="number" class="form-control" name="searchTextMaxPrice" id="searchTextMaxPrice" step="100" placeholder="Max. rent in CHF"> -->
-<!--   </div> -->
-<!--    <div class="form-group"> -->
-<!--     <label class="sr-only" for="searchTextNbrRoomMatesMin">Number of room mates from</label> -->
-<!--     <input type="number" class="form-control" name="searchTextNbrRoomMatesMin" id="searchTextNbrRoomMatesMin" placeholder="Min. room mates"> -->
-<!--   </div> -->
-<!--    <div class="form-group"> -->
-<!--     <label class="sr-only" for="searchTextNbrRoomMatesMax">Number of room mates to</label> -->
-<!--     <input type="number" class="form-control" name="searchTextNbrRoomMatesMax" id="searchTextNbrRoomMatesMax" placeholder="Max. room mates"> -->
-<!--   </div> -->
-<!--    <div class="form-group"> -->
-<!--     <label class="sr-only" for="searchTextNbrRoomsMin">Number of rooms from</label> -->
-<!--     <input type="number" class="form-control" name="searchTextNbrRoomsMin" id="searchTextNbrRoomsMin" placeholder="Min. of rooms"> -->
-<!--   </div> -->
-<!--    <div class="form-group"> -->
-<!--     <label class="sr-only" for="searchTextNbrRoomsMax">Number of rooms to</label> -->
-<!--     <input type="number" class="form-control" name="searchTextNbrRoomsMax" id="searchTextNbrRoomsMax" placeholder="Max. of rooms"> -->
-<!--   </div> -->
-<!--   </div>  -->
-<%-- </form:form> --%>
 
 <a href="<spring:url value="/random.html"/>"  class="btn btn-primary" role="button">
     Get random dish
@@ -65,12 +23,12 @@
  <div id="Layout" class="container">
             <div class="row">
 
-                <div class="table-responsive">
                 <table id="dishesTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                     <tr>
                         <th>Dish</th>
                         <th>Description</th>
+                        <th>User</th>
                         <th>Cook</th>
                         <th>Image</th>
                         <th>Details</th>
@@ -81,6 +39,7 @@
                     <tr>
                         <th>Dish</th>
                         <th>Description</th>
+                        <th>User</th>
                         <th>Cook</th>
                         <th>Image</th>
                         <th>Details</th>
@@ -93,7 +52,8 @@
                             <tr>
                                 <td>${dish.dishName}</td>
                                 <td>${dish.description}</td>
-                                <td>${dish.cook.name}</td>
+                                <td>${dish.user.name}</td>
+                                <td>${dish.cook}</td>
                                 <td>
                                     <c:choose>
                                         <c:when test="${not empty dish.images}">
@@ -113,7 +73,7 @@
                         </c:forEach>
                     </tbody>
                 </table>
-                    </div>
+                    <%--</div>--%>
 
 </div>
 </div>
