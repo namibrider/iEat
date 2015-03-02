@@ -30,7 +30,9 @@
 }
 
 .home-container {
-	overflow: hidden;
+	/*overflow: hidden;*/
+    overflow-x: auto;
+
 }
 
 .no-background {
@@ -188,4 +190,9 @@
 
 .btn-login {
 	margin-bottom: 10px !important;
+}
+
+.table-responsive
+{
+    overflow-x: auto;
 }

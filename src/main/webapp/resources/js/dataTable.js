@@ -1,3 +1,6 @@
 $(document).ready(function(){
-    $('#dishesTable').DataTable();
+    $('#dishesTable').DataTable({
+            responsive:true
+    }
+    );
 });

@@ -15,7 +15,7 @@
         <img src="http://i.imgur.com/6sCMy.jpg" alt="spaghetti"   style="width: 100%; height: 100%;">
     </div>
     <div class="item">
-      <img src="http://i.imgur.com/6sCMy.jpg" alt="spaghetti">
+      <img src="http://i.imgur.com/6sCMy.jpg" alt="spaghetti" style="width: 100%; height: 100%;">
       <div class="carousel-caption">
           <h3>Yummi</h3>
       </div>
