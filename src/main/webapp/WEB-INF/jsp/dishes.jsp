@@ -28,7 +28,7 @@
                     <tr>
                         <th>Dish</th>
                         <th>Description</th>
-                        <th>User</th>
+                        <%--<th>User</th>--%>
                         <th>Cook</th>
                         <th>Image</th>
                         <th>Details</th>
@@ -39,7 +39,7 @@
                     <tr>
                         <th>Dish</th>
                         <th>Description</th>
-                        <th>User</th>
+                        <%--<th>User</th>--%>
                         <th>Cook</th>
                         <th>Image</th>
                         <th>Details</th>
@@ -52,7 +52,7 @@
                             <tr>
                                 <td>${dish.dishName}</td>
                                 <td>${dish.description}</td>
-                                <td>${dish.user.name}</td>
+                                <%--<td>${dish.user.name}</td>--%>
                                 <td>${dish.cook}</td>
                                 <td>
                                     <c:choose>
